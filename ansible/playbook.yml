@@ -1,0 +1,8 @@
+---
+- hosts: academic_servers
+  become: yes
+  roles:
+    - common
+    - docker
+    - nginx
+    - student_app
