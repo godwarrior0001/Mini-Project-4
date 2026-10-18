@@ -1,0 +1,9 @@
+---
+- name: Pull and run Student Record Flask container
+  docker_container:
+    name: student-app
+    image: your-dockerhub-username/student-record-app:v1.0.0
+    state: started
+    restart_policy: always
+    ports:
+      - "8080:8080"
