@@ -90,7 +90,7 @@ resource "aws_s3_bucket" "academic_backups" {
 
 resource "aws_instance" "app_server" {
   ami                    = "ami-0fc5d935ebf8bc3bc" # Ubuntu 22.04 LTS us-east-1
-  instance_type          = "t2.micro[span_6](start_span)"[span_6](end_span)
+  instance_type          = "t2.micro"
   subnet_id              = aws_subnet.academic_public_subnet.id
   vpc_security_group_ids = [aws_security_group.academic_sg.id]
   key_name               = "aws-default-key"
